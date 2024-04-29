@@ -1,0 +1,488 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59A916AA-C5A7-4CEE-A79C-EECB51593528}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fixmojowebsite</RootNamespace>
+    <AssemblyName>fixmojowebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44313</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ac.aspx" />
+    <Content Include="acdet.aspx" />
+    <Content Include="admin.aspx" />
+    <Content Include="adserv.css" />
+    <Content Include="appointment.css" />
+    <Content Include="booking.aspx" />
+    <Content Include="booking.css" />
+    <Content Include="bookingac.aspx" />
+    <Content Include="bookingcarpen.aspx" />
+    <Content Include="bookingclean.aspx" />
+    <Content Include="bookingelec.aspx" />
+    <Content Include="bookingpest.aspx" />
+    <Content Include="bookingplum.aspx" />
+    <Content Include="carpenter.aspx" />
+    <Content Include="carpenterdet.aspx" />
+    <Content Include="clean.aspx" />
+    <Content Include="cleandet.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="elec.aspx" />
+    <Content Include="elecdet.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="imgnvid\100 Essential Cleaning Hacks for Your Home.jpg" />
+    <Content Include="imgnvid\ac offer.gif" />
+    <Content Include="imgnvid\ac.png" />
+    <Content Include="imgnvid\acgas.png" />
+    <Content Include="imgnvid\acinstall.jpg" />
+    <Content Include="imgnvid\acoff.png" />
+    <Content Include="imgnvid\acunin.jpg" />
+    <Content Include="imgnvid\adminac.jpg" />
+    <Content Include="imgnvid\admincarpen.jpg" />
+    <Content Include="imgnvid\adminclean.jpg" />
+    <Content Include="imgnvid\adminpainting.jpg" />
+    <Content Include="imgnvid\capen.jpeg" />
+    <Content Include="imgnvid\car.png" />
+    <Content Include="imgnvid\carcur.jpg" />
+    <Content Include="imgnvid\card1.png" />
+    <Content Include="imgnvid\card2.png" />
+    <Content Include="imgnvid\cardoor.jpg" />
+    <Content Include="imgnvid\cardrep.jpeg" />
+    <Content Include="imgnvid\cardril.jpg" />
+    <Content Include="imgnvid\carpenterad.jpg" />
+    <Content Include="imgnvid\carwdoor.jpeg" />
+    <Content Include="imgnvid\cfurrep.jpg" />
+    <Content Include="imgnvid\clean1st.jpg" />
+    <Content Include="imgnvid\clean2.png" />
+    <Content Include="imgnvid\cleanbal.jpg" />
+    <Content Include="imgnvid\cleanbath.jpg" />
+    <Content Include="imgnvid\cleancla.png" />
+    <Content Include="imgnvid\cleankit.jpeg" />
+    <Content Include="imgnvid\cleanoff.gif" />
+    <Content Include="imgnvid\cleanpre.jpeg" />
+    <Content Include="imgnvid\cleansofa.jpg" />
+    <Content Include="imgnvid\coil.jpg" />
+    <Content Include="imgnvid\cupins.jpg" />
+    <Content Include="imgnvid\cuprep.jpg" />
+    <Content Include="imgnvid\customercare.jpg" />
+    <Content Include="imgnvid\custsprt.jpg" />
+    <Content Include="imgnvid\ele2.png" />
+    <Content Include="imgnvid\eleadmin.jpeg" />
+    <Content Include="imgnvid\elebook.jpeg" />
+    <Content Include="imgnvid\elebulbins.jpeg" />
+    <Content Include="imgnvid\elebulbrep.jpg" />
+    <Content Include="imgnvid\elecaminst.jpeg" />
+    <Content Include="imgnvid\elefanins.jpeg" />
+    <Content Include="imgnvid\elefanrep.jpg" />
+    <Content Include="imgnvid\eleswtinsl.jpg" />
+    <Content Include="imgnvid\eleswtrepl.jpeg" />
+    <Content Include="imgnvid\eletvinstall.jpeg" />
+    <Content Include="imgnvid\FilledStar.gif" />
+    <Content Include="imgnvid\first.png" />
+    <Content Include="imgnvid\fixlogo.png" />
+    <Content Include="imgnvid\genac.jpg" />
+    <Content Include="imgnvid\Home - Maintenx.jpg" />
+    <Content Include="imgnvid\kitchenoff.gif" />
+    <Content Include="imgnvid\login.png" />
+    <Content Include="imgnvid\loginbg.jpg" />
+    <Content Include="imgnvid\logo2.png" />
+    <Content Include="imgnvid\nontoxic.jpg" />
+    <Content Include="imgnvid\paint.png" />
+    <Content Include="imgnvid\paintext.jpeg" />
+    <Content Include="imgnvid\painthouse.jpeg" />
+    <Content Include="imgnvid\paintinte.jpeg" />
+    <Content Include="imgnvid\paintwaterprof.jpeg" />
+    <Content Include="imgnvid\paneloffbg.png" />
+    <Content Include="imgnvid\pestbath.jpeg" />
+    <Content Include="imgnvid\pestcon.png" />
+    <Content Include="imgnvid\pesthome.jpeg" />
+    <Content Include="imgnvid\pestkitch.jpeg" />
+    <Content Include="imgnvid\pestslide.png" />
+    <Content Include="imgnvid\pestuten.jpeg" />
+    <Content Include="imgnvid\pl2.png" />
+    <Content Include="imgnvid\plbook.jpeg" />
+    <Content Include="imgnvid\pldrain.jpeg" />
+    <Content Include="imgnvid\plflushrep.jpeg" />
+    <Content Include="imgnvid\plshowinst.jpeg" />
+    <Content Include="imgnvid\pltapinst.jpeg" />
+    <Content Include="imgnvid\pltaprep.jpeg" />
+    <Content Include="imgnvid\pltoiletinst.jpg" />
+    <Content Include="imgnvid\pltoiletrep.jpeg" />
+    <Content Include="imgnvid\plumbadmin.jpeg" />
+    <Content Include="imgnvid\plwashinst.jpg" />
+    <Content Include="imgnvid\plwashpipe.jpeg" />
+    <Content Include="imgnvid\production_id_4109358 %282160p%29.mp4" />
+    <Content Include="imgnvid\registerbg.jpg" />
+    <Content Include="imgnvid\regser.png" />
+    <Content Include="imgnvid\Screenshot 2024-01-10 223808.png" />
+    <Content Include="imgnvid\Screenshot 2024-01-10 231242.png" />
+    <Content Include="imgnvid\Screenshot 2024-01-10 234645.png" />
+    <Content Include="imgnvid\Screenshot 2024-01-11 075142.png" />
+    <Content Include="imgnvid\Screenshot 2024-01-11 110529.png" />
+    <Content Include="imgnvid\Screenshot 2024-01-16 184023.png" />
+    <Content Include="imgnvid\slide2.png" />
+    <Content Include="imgnvid\slideplum.png" />
+    <Content Include="imgnvid\Star.gif" />
+    <Content Include="imgnvid\template con sfondo giallo per storie di instagram.jpg" />
+    <Content Include="imgnvid\trainedprof.jpg" />
+    <Content Include="imgnvid\tv.png" />
+    <Content Include="imgnvid\Untitled design.png" />
+    <Content Include="imgnvid\WaitingStar.gif" />
+    <Content Include="imgnvid\wetac.jpg" />
+    <Content Include="login.aspx" />
+    <Content Include="login.css" />
+    <Content Include="main.css" />
+    <Content Include="paint.aspx" />
+    <Content Include="paintingdet.aspx" />
+    <Content Include="payment.css" />
+    <Content Include="paymentdet.aspx" />
+    <Content Include="pest1.aspx" />
+    <Content Include="pestdet.aspx" />
+    <Content Include="plumber.aspx" />
+    <Content Include="plumdet.aspx" />
+    <Content Include="rate.aspx" />
+    <Content Include="rate.css" />
+    <Content Include="register.aspx" />
+    <Content Include="register.css" />
+    <Content Include="serve.css" />
+    <Content Include="servicepg.css" />
+    <Content Include="services.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="test.css" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ac.aspx.cs">
+      <DependentUpon>ac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ac.aspx.designer.cs">
+      <DependentUpon>ac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="acdet.aspx.cs">
+      <DependentUpon>acdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acdet.aspx.designer.cs">
+      <DependentUpon>acdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="booking.aspx.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="booking.aspx.designer.cs">
+      <DependentUpon>booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookingac.aspx.cs">
+      <DependentUpon>bookingac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookingac.aspx.designer.cs">
+      <DependentUpon>bookingac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookingcarpen.aspx.cs">
+      <DependentUpon>bookingcarpen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookingcarpen.aspx.designer.cs">
+      <DependentUpon>bookingcarpen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookingclean.aspx.cs">
+      <DependentUpon>bookingclean.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookingclean.aspx.designer.cs">
+      <DependentUpon>bookingclean.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookingelec.aspx.cs">
+      <DependentUpon>bookingelec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookingelec.aspx.designer.cs">
+      <DependentUpon>bookingelec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookingpest.aspx.cs">
+      <DependentUpon>bookingpest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookingpest.aspx.designer.cs">
+      <DependentUpon>bookingpest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookingplum.aspx.cs">
+      <DependentUpon>bookingplum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookingplum.aspx.designer.cs">
+      <DependentUpon>bookingplum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carpenter.aspx.cs">
+      <DependentUpon>carpenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carpenter.aspx.designer.cs">
+      <DependentUpon>carpenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carpenterdet.aspx.cs">
+      <DependentUpon>carpenterdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carpenterdet.aspx.designer.cs">
+      <DependentUpon>carpenterdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clean.aspx.cs">
+      <DependentUpon>clean.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clean.aspx.designer.cs">
+      <DependentUpon>clean.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cleandet.aspx.cs">
+      <DependentUpon>cleandet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cleandet.aspx.designer.cs">
+      <DependentUpon>cleandet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="elec.aspx.cs">
+      <DependentUpon>elec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="elec.aspx.designer.cs">
+      <DependentUpon>elec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="elecdet.aspx.cs">
+      <DependentUpon>elecdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="elecdet.aspx.designer.cs">
+      <DependentUpon>elecdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paint.aspx.cs">
+      <DependentUpon>paint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paint.aspx.designer.cs">
+      <DependentUpon>paint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paintingdet.aspx.cs">
+      <DependentUpon>paintingdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paintingdet.aspx.designer.cs">
+      <DependentUpon>paintingdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paymentdet.aspx.cs">
+      <DependentUpon>paymentdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paymentdet.aspx.designer.cs">
+      <DependentUpon>paymentdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pest1.aspx.cs">
+      <DependentUpon>pest1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pest1.aspx.designer.cs">
+      <DependentUpon>pest1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pestdet.aspx.cs">
+      <DependentUpon>pestdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pestdet.aspx.designer.cs">
+      <DependentUpon>pestdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="plumber.aspx.cs">
+      <DependentUpon>plumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="plumber.aspx.designer.cs">
+      <DependentUpon>plumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="plumdet.aspx.cs">
+      <DependentUpon>plumdet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="plumdet.aspx.designer.cs">
+      <DependentUpon>plumdet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rate.aspx.cs">
+      <DependentUpon>rate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rate.aspx.designer.cs">
+      <DependentUpon>rate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49918</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44313/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

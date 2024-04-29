@@ -1,0 +1,18 @@
+﻿.rating {
+    display: inline-block;
+}
+
+    .rating input[type="radio"] {
+        display: none;
+    }
+
+    .rating label {
+        font-size: 30px; 
+        color: #ccc; 
+        cursor: pointer; 
+    }
+
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #ffcc00;
+        }
